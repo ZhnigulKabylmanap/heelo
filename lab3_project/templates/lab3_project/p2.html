@@ -1,0 +1,30 @@
+{% load project_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% get_categories %}
+
+{% get_categories as categories %}
+{% for c in categories %}
+<h4>{{c.content}}</h4>
+{% endfor %}
+
+{% getcats as categories %}
+{% for c in categories %}
+<h4>{{c.content}}</h4>
+{% endfor %}
+
+{% show_categories %}
+
+{% getcats filter=1 %}
+
+{%show_categories 'title' cat_selected %}
+{%show_categories '-title' cat_selected %}
+
+</body>
+</html>
