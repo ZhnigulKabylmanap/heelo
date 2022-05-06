@@ -15,4 +15,11 @@ def p2(request):
 def p3(request):
     return render(request,'lab3_project/p3.html')
 
+from django.core.mail import EmailMessage
+def send_message(request):
+    email=EmailMessage("Zhainigul","Here is a picture for you","200103272@stu.sdu.edu.kz",['200103272@stu.sdu.edu.kz'],headers={'Message-ID':'foo'})
+    email.attach_file('C:/WebFinal/picture.jpg')
+    email.send(fail_silently=False)
+    return render(request,'lab3_project/mail.html')
+
 
