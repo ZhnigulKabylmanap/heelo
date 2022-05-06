@@ -7,5 +7,6 @@ urlpatterns=[
     path('post/<int:post_id>/', views.show_post, name='post'),
     path('post/<slug:post_slug>/', views.show_slug, name='post'),
 
-    path('send/', views.send_message, name='send')
+    path('send/', views.send_message, name='send'),
+
 ]

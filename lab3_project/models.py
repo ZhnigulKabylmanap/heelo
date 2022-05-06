@@ -27,3 +27,11 @@ class Posts(models.Model):
     def get_absolute_url(self):
         return reverse('post',kwargs={'post_slug': self.slug})
 
+class Lab4(models.Model):
+    name = models.CharField(max_length=10)
+    Surname = models.CharField(max_length=10)
+    age = models.IntegerField(verbose_name="AgeCVBNM,")
+    Address=models.CharField(max_length=18)
+    Email = models.CharField(max_length=20)
+    Password = models.CharField(max_length=8)
+    is_published = models.BooleanField(verbose_name="Remember Password")
